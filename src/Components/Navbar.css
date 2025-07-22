@@ -1,0 +1,14 @@
+.navbar{
+margin-bottom: 70px;
+text-align: center;
+}
+.navbar-title{
+    color: orangered;
+    text-align: center;
+}
+.navbar-start{
+
+}
+.navbar-welcome{
+    font-size: 29px;
+}
