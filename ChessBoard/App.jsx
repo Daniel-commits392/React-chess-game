@@ -1,13 +1,14 @@
-import React from "react";
-import ChessBoard from "./ChessBoard";
 
+import React from "react";
+import Chessboard from "./Chessboard";
 function App() {
   return (
     <div className="App">
-      <h2> Chess Board</h2>
-      <ChessBoard />
+      <h1></h1>
+      <Chessboard />
     </div>
   );
 }
 
 export default App;
+
