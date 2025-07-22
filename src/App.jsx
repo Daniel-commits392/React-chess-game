@@ -8,23 +8,34 @@ import StartMenu from "./Components/StartMenu";
 import ScoreBoard from "./Components/Scoreboard";
 
 function App () {
+
   const [gameStarted, setGameStarted] = useState(false);
   const startGame = function () {
-    setGameStarted(true);
+  setGameStarted(true);
   };
+
+  const [currentTurn,setCurrentTurn] = useState("Player 1");
+
+  const handleEndTurn = function ()  {
+    setCurrentTurn(currentTurn === "Player 1" ? "Player 2" : "Player 1");
+  };
+
+  const handleResetGame= function () {
+    setCurrentTurn('Player 1');
+  }
   if (!gameStarted) {
     return <StartMenu onStart={startGame} />;
   }
 
 
 
+
   return (
     <div>
-     
      <Navbar/>
      <Instructions/>
        <Chessboard/>
-      <Turn/>
+      <Turn currentTurn={currentTurn}  onEndTurn={handleEndTurn}  onReset={handleResetGame}/>
       <ScoreBoard/>
     </div>
   )

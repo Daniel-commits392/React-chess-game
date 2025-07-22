@@ -1,4 +1,4 @@
-function Turn () {
+function Turn ({currentTurn, onEndTurn, onReset}) {
     return (
         <div className="turn-indicator" style={
             {
@@ -10,9 +10,9 @@ function Turn () {
             }
         }>
             <h2>Current Turn</h2>
-            <p>It's Player 1's turn</p>
-            <button>End Turn</button>
-            <button>Reset Game</button>
+            <p>It's {currentTurn}'s' turn</p>
+            <button onClick= {onEndTurn}>End Turn</button>
+            <button onClick={onReset}>Reset Game</button>
             <button>Undo Move</button>
             <button>Redo Move</button>
             <button>Save Game</button>     
