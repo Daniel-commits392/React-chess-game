@@ -5,6 +5,8 @@ import Instructions from "./Components/GameInstructions";
 import StartMenu from "./Components/StartMenu";
 import ScoreBoard from "./Components/Scoreboard";
 import ChessGame from "./Components/ChessGame";
+import GameBoard from "./myLogic/GameBoard";
+import GameSquare from "./myLogic/GameSquare";
 import './App.css'
 
 
@@ -32,8 +34,9 @@ function App () {
     <div>
      <Navbar/>
      <Instructions/>
-    
       <ChessGame updateScore={updateScore}  />
+      <GameBoard />
+      <GameSquare />
       <ScoreBoard player1score={player1score} player2score={player2score}   />
     </div>
   )
