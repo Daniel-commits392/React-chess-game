@@ -1,33 +1,43 @@
-import { useState } from 'react'
-import './App.css'
-import React from 'react'
+import { useState } from "react";
+import React from "react";
+import Navbar from "./Components/Navbar";
+import Chessboard from "./Components/Chessboard";
+import Instructions from "./Components/GameInstructions";
+import Turn from "./Components/TurnIndicator";
+import StartMenu from "./Components/StartMenu";
+import ScoreBoard from "./Components/Scoreboard";
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+
+  const [gameStarted, setGameStarted] = useState(false);
+  const startGame = function () {
+  setGameStarted(true);
+  };
+
+  const [currentTurn,setCurrentTurn] = useState("Player 1");
+
+  const handleEndTurn = function ()  {
+    setCurrentTurn(currentTurn === "Player 1" ? "Player 2" : "Player 1");
+  };
+
+  const handleResetGame= function () {
+    setCurrentTurn('Player 1');
+  }
+  if (!gameStarted) {
+    return <StartMenu onStart={startGame} />;
+  }
+
+
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+     <Navbar/>
+     <Instructions/>
+       <Chessboard/>
+      <Turn currentTurn={currentTurn}  onEndTurn={handleEndTurn}  onReset={handleResetGame}/>
+      <ScoreBoard/>
+    </div>
   )
 }
 
