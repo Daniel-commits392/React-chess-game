@@ -1,7 +1,7 @@
 // myLogic/GameBoard.jsx
 import React, { useState } from "react";
 import GameSquare from "./GameSquare";
-import { isWhitePiece, isBlackPiece } from "./utils";
+import { isWhitePiece, isBlackPiece } from "../myLogic/utils";
 import "../index.css";
 
 const initialBoard = [
@@ -45,7 +45,7 @@ function GameBoard() {
 
   return (
     <div>
-      <p>Current Turn: {turn}</p>
+      <h3>Current Turn: {turn}</h3>
       <div className="board">
         {board.map((rowArr, row) =>
           rowArr.map((piece, col) => {

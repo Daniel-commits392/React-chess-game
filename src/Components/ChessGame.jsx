@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChessBoard from './Board'; 
+import GameBoard from './GameBoard'; 
 import { getNextTurn, isValidTurn } from '../logic/turnManager';
 import './ChessBoard.css';
 
@@ -23,8 +23,7 @@ export default function ChessGame() {
 
   return (
     <div>
-      <h2>Current Turn: {currentTurn === 'white' ? '♔ White' : '♚ Black'}</h2>
-      <ChessBoard onMove={handleMove} currentTurn={currentTurn} />
+      <GameBoard  onMove={handleMove} currentTurn={currentTurn}/>
     </div>
   );
 }
