@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Navbar from "./Components/Navbar";
-import Chessboard from "./Components/Chessboard";
+import ChessBoard from "./Components/ChessBoard";
 import Instructions from "./Components/GameInstructions";
 import Turn from "./Components/TurnIndicator";
 import StartMenu from "./Components/StartMenu";
@@ -34,7 +34,7 @@ function App () {
     <div>
      <Navbar/>
      <Instructions/>
-       <Chessboard/>
+       <ChessBoard/>
       <Turn currentTurn={currentTurn}  onEndTurn={handleEndTurn}  onReset={handleResetGame}/>
       <ScoreBoard/>
     </div>
