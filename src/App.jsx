@@ -1,11 +1,12 @@
 import { useState } from "react";
 import React from "react";
 import Navbar from "./Components/Navbar";
-import ChessBoard from "./Components/Chessboard";
 import Instructions from "./Components/GameInstructions";
-import Turn from "./Components/TurnIndicator";
 import StartMenu from "./Components/StartMenu";
 import ScoreBoard from "./Components/Scoreboard";
+import ChessGame from "./Components/ChessGame";
+import './App.css'
+
 
 function App () {
 
@@ -13,30 +14,27 @@ function App () {
   const startGame = function () {
   setGameStarted(true);
   };
+  const [player1score, setPlayer1Score] = useState(0);
+  const [player2score, setPlayer2Score] = useState(0);
 
-  const [currentTurn,setCurrentTurn] = useState("Player 1");
-
-  const handleEndTurn = function ()  {
-    setCurrentTurn(currentTurn === "Player 1" ? "Player 2" : "Player 1");
-  };
-
-  const handleResetGame= function () {
-    setCurrentTurn('Player 1');
+  function  updateScore(winner) {
+    if (winner === "player1"){
+      setPlayer1Score(player1score + 1);
+    }else {
+      setPlayer2Score(player2score + 1);
+    }
   }
   if (!gameStarted) {
     return <StartMenu onStart={startGame} />;
   }
 
-
-
-
   return (
     <div>
      <Navbar/>
      <Instructions/>
-       <ChessBoard/>
-      <Turn currentTurn={currentTurn}  onEndTurn={handleEndTurn}  onReset={handleResetGame}/>
-      <ScoreBoard/>
+    
+      <ChessGame updateScore={updateScore}  />
+      <ScoreBoard player1score={player1score} player2score={player2score}   />
     </div>
   )
 }

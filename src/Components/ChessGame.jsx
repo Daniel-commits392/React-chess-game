@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import ChessBoard from './ChessBoard';
+import ChessBoard from './Board'; 
 import { getNextTurn, isValidTurn } from '../logic/turnManager';
+import './ChessBoard.css';
 
 export default function ChessGame() {
   const [currentTurn, setCurrentTurn] = useState('white');
