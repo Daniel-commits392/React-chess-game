@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Navbar from "./Components/Navbar";
-import ChessBoard from "./Components/ChessBoard";
+import ChessBoard from "./Components/Chessboard";
 import Instructions from "./Components/GameInstructions";
 import Turn from "./Components/TurnIndicator";
 import StartMenu from "./Components/StartMenu";
