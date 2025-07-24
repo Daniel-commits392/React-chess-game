@@ -63,6 +63,10 @@ function GameBoard() {
           })
         )}
       </div>
+      <div style={{marginTop: "20px"}}>
+        <button onClick={() => alert('Game ended in a draw')}>Draw</button>
+        <button onClick={() =>{setBoard(initialBoard);setTurn('White'); setSelected(null); } }>Reset Game</button>
+      </div>
     </div>
   );
 }
