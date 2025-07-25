@@ -13,10 +13,11 @@ function Turn ({currentTurn, onEndTurn, onReset}) {
             <p>It's {currentTurn}'s' turn</p>
             <button onClick= {onEndTurn}>End Turn</button>
             <button onClick={onReset}>Reset Game</button>
-                
+            <button>Undo Move</button>
+            <button>Redo Move</button>
+            <button>Save Game</button>     
         </div>
     )
 }
 export default Turn;
-
-// This is my code . When We will continue with this project ill add this to the game. For now its just there
+// This code will be added when this project will continue on. For now its just for show.
