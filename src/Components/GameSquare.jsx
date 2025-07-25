@@ -1,4 +1,3 @@
-// myLogic/GameSquare.jsx
 import React from "react";
 import "../index.css";
 

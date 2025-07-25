@@ -9,7 +9,7 @@ function StartMenu ({ onStart }) {
                 marginTop: "20px"
             }
         }>
-            <h2>Ready to start ?</h2>
+            <h2>Ready to start  ?</h2>
             <p>Click to start</p>
             <button onClick={onStart}>Click Me</button>
         </div>

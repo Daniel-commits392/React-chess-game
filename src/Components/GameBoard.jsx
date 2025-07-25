@@ -46,7 +46,7 @@ function GameBoard() {
             const isSelected = selected?.row === row && selected?.col === col;
             return (
               <GameSquare
-              key={`${row}-${col}`}
+              key={`${row}${col}`}
                piece={piece}
                 isLight={isLight}
               isSelected={isSelected}
