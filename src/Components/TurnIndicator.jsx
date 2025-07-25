@@ -18,3 +18,5 @@ function Turn ({currentTurn, onEndTurn, onReset}) {
     )
 }
 export default Turn;
+
+// This is my code . When We will continue with this project ill add this to the game. For now its just there
