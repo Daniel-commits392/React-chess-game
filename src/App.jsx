@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import Instructions from "./Components/GameInstructions";
 import StartMenu from "./Components/StartMenu";
-import ScoreBoard from "./Components/Scoreboard";
+//import ScoreBoard from "./Components/Scoreboard";
 import ChessGame from "./Components/ChessGame";
 
 //import GameSquare from "./myLogic/GameSquare";
@@ -35,8 +35,7 @@ function App () {
      <Navbar/>
      <Instructions/>
      <ChessGame updateScore={updateScore}  />
-      <ScoreBoard player1score={player1score} player2score={player2score}   />
-    </div>
+         </div>
   )
 }
 
