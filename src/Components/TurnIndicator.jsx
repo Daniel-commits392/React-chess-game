@@ -13,9 +13,7 @@ function Turn ({currentTurn, onEndTurn, onReset}) {
             <p>It's {currentTurn}'s' turn</p>
             <button onClick= {onEndTurn}>End Turn</button>
             <button onClick={onReset}>Reset Game</button>
-            <button>Undo Move</button>
-            <button>Redo Move</button>
-            <button>Save Game</button>     
+                
         </div>
     )
 }
