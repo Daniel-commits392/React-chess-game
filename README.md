@@ -3,7 +3,7 @@
 A basic interactive chess game built using **React.js**. This project was created as part of a group assignment to demonstrate our understanding of React components, state management, props, and interactivity through event handling.
 
 ## Live Demo
-
+https://react-mate.netlify.app/
 
 ## 🧩 Features
 
