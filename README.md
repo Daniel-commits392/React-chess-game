@@ -7,7 +7,7 @@ https://react-mate.netlify.app/
 
 ## 🧩 Features
 
-- Basic chessboard layout .
+- Basic chessboard layout.
 - Toggle between white and black player turns.
 - Piece selection and movement on the board.
 - Restart and Draw buttons (added for game control).
@@ -59,17 +59,16 @@ src/
 ## 👥 Team Members
   Daniel Kariuki
 - Karen Shauri
-- Charle Mwangi
+- Charles Mwangi
 - Martin Mbatia
 
 
 
 ## 🧠 Challenges Faced
+- Adjusting to the members in the group
+- Conflicts when it comes to merging
+- 
 
-- Managing game state between turns.
-- Ensuring valid piece movements (currently simplified).
-- Merge conflicts during collaboration.
-- Deployment issues and Netlify configuration.
 
 
 ## ✅ Future Improvements
@@ -78,3 +77,5 @@ src/
 - Highlight possible moves for each piece.
 - Implement full chess rules (check, checkmate, en passant, castling).
 - Add move history log and timer.
+
+
